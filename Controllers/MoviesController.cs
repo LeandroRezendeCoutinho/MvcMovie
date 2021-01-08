@@ -43,30 +43,30 @@ namespace MvcMovie.Controllers
             return View(movie);
         }
 
-        // SYNC 
+        // SYNC
         // public IActionResult Index()
-        // {            
+        // {
         //     return View(GenerateMovies());
         // }
 
-        // private List<Movie> GenerateMovies()
-        // {
-        //     var movies = new List<Movie>();
-        //     for (int i = 0; i < 10; i++)
-        //     {
-        //         movies.Add(
-        //             new Movie
-        //             {
-        //                 Id = i,
-        //                 Genre = "Comedy",
-        //                 Price = 100,
-        //                 ReleaseDate = DateTime.Now
-        //             }
-        //         );                
-        //     }
-            
-        //     return movies;
-        // }
+        private List<Movie> GenerateMovies()
+        {
+            var movies = new List<Movie>();
+            for (int i = 0; i < 10; i++)
+            {
+                movies.Add(
+                    new Movie
+                    {
+                        Id = i,
+                        Genre = "Comedy",
+                        Price = 100,
+                        ReleaseDate = DateTime.Now
+                    }
+                );
+            }
+
+            return movies;
+        }
 
         // GET: Movies/Create
         public IActionResult Create()

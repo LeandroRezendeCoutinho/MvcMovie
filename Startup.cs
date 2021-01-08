@@ -28,6 +28,7 @@ namespace MvcMovie
             services.AddControllersWithViews();
             services.AddDbContext<MvcMovieContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("MvcMovieContext")));
+            // options.UseInMemoryDatabase("MvcMovie"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
