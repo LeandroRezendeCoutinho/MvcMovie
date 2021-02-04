@@ -19,7 +19,8 @@ namespace MvcMovie.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .LogTo(Console.WriteLine, LogLevel.Information);
+                .UseNpgsql("Host=localhost;Database=mvc_movie;Username=postgres;Password=postgres")
+            .LogTo(Console.WriteLine, LogLevel.Information);
         }
     }
 }
